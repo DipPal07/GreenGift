@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Donor Details</title>
+    <link rel="stylesheet" href="indexStyle.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/donorDetailsStyle.css" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">GreenGifts</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Donor Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutUs.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Contact us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Login
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a id="showLogin" class="dropdown-item" href="#">Login</a>
+                            </li>
+                            <li>
+                                <a id="showRegistration" class="dropdown-item" href="#">Registration</a>
+                                <a id="showForgotPassword" class="dropdown-item" href="#">Forgot password</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Admin Login</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li> -->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div id="loginAndRegistration">
+        <form id="login" name="login" method="post" action="Login">
+            <div class="formMainDiv">
+                <div class="loginImage">
+                    <div class="x">
+                        <img src="./asset/x1.png" class="ximage" id="xlog" />
+                    </div>
+                    <p id="brandName">GreenGifts</p>
+                </div>
+                <div class="loginContent">
+                    <label for="email">Email</label>
+                    <input name="email" type="text" placeholder="Enter your email" />
+                    <label for="password">Password</label>
+                    <input name="password" type="password" placeholder="Enter your password" />
+                    <input class="button" type="submit" value="Login" />
+
+                    <p>
+                        don,t remember password?<a class="aLink" id="showForgotPassword">Forget password</a>
+                    </p>
+                </div>
+            </div>
+        </form>
+        <form id="registration" name="registration" method="post" action="Registration">
+            <div class="formMainDiv">
+                <div class="loginImage">
+                    <div class="x">
+                        <img src="./asset/x1.png" class="ximage" id="xreg" />
+                    </div>
+                    <p id="brandName">GreenGifts</p>
+                </div>
+                <div class="loginContent">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" placeholder="Enter your name" />
+                    <label for="mobileNo">Mobile Number</label>
+                    <input name="mobileNo" type="text" placeholder="Enter your mobile number" />
+                    <label for="email">Email</label>
+                    <input name="email" type="text" placeholder="Enter your email" />
+
+                    <label for="password">Password</label>
+                    <input name="password" type="password" placeholder="Enter your password" />
+                    <label for="address">Address</label>
+                    <textarea id="address" type="text" placeholder="Enter your address" name="address"></textarea>
+                    <input class="button" type="submit" value="Register" />
+                    <p>already have account?<a class="aLink" href="#">Login</a></p>
+                </div>
+            </div>
+        </form>
+        <form id="forgotPassword" name="forgotPassword" method="post" action="ForgotPassword">
+            <div class="formMainDiv">
+                <div class="loginImage">
+                    <div class="x">
+                        <img src="./asset/x1.png" class="ximage" id="xfor" />
+                    </div>
+                    <p id="brandName">GreenGifts</p>
+                </div>
+                <div class="loginContent">
+                    <label for="email">Email</label>
+                    <input name="email" type="text" placeholder="Enter your email" />
+
+                    <label for="newPassword">New password</label>
+                    <input id="newPassword" name="newPassword" type="password" placeholder="Enter your new password" />
+                    <label for="confirmNewPassword"> Confirm new password</label>
+
+                    <input id="confirmNewPassword" name="confirmNewPassword" type="password"
+                        placeholder="Enter your new password" />
+                    <label for="otp">OTP</label>
+                    <input id="otp" name="otp" type="text" placeholder="Enter your otp" />
+
+                    <input class="button" type="submit" value="Change" />
+
+                    <p>remember password?<a class="aLink" href="#">login</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="overly"></div>
+    <!-- body of this page -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-12 m-3">
+                <div class="s1">
+                    <h4>Dip Kumar Pal</h4>
+                    <div class="donorDetailsBody">
+                        <p class="p_DetailsOfDonor">Date : 16/12/2024</p>
+                        <div class="numberOfPlant">
+                            <p class="p_DetailsOfDonor">Number of plant : 2000</p>
+                        </div>
+
+
+                        <p class="p_DetailsOfDonor">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quaerat veniam dolor
+                            officia labore voluptate eum, rem aliquam incidunt eaque expedita earum ducimus odit
+                            recusandae dignissimos ullam quidem facilis? Vero.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-12 m-3">
+                <div class="s1">
+                    <h4>Ram</h4>
+                    <div class="donorDetailsBody">
+                        <p class="p_DetailsOfDonor">Date : 11/12/2024</p>
+                        <div class="numberOfPlant">
+                            <p class="p_DetailsOfDonor">Number of plant : 2000</p>
+                        </div>
+
+
+                        <p class="p_DetailsOfDonor">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quaerat veniam dolor
+                            officia labore voluptate eum, rem aliquam incidunt eaque expedita earum ducimus odit
+                            recusandae dignissimos ullam quidem facilis? Vero.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-12 m-3">
+                <div class="s1">
+                    <h4>Kushal</h4>
+                    <div class="donorDetailsBody">
+                        <p class="p_DetailsOfDonor">Date : 16/12/2024</p>
+                        <div class="numberOfPlant">
+                            <p class="p_DetailsOfDonor">Number of plant : 8000</p>
+                        </div>
+
+
+                        <p class="p_DetailsOfDonor">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quaerat veniam dolor
+                            officia labore voluptate eum, rem aliquam incidunt eaque expedita earum ducimus odit
+                            recusandae dignissimos ullam quidem facilis? Vero.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-4 col-10 m-3">
+                <div class="s1">
+                    <h4>Dip Kumar Pal</h4>
+                    <div class="donorDetailsBody">
+                        <p class="p_DetailsOfDonor">Date : 16/12/2024</p>
+                        <div class="numberOfPlant">
+                            <p class="p_DetailsOfDonor">Number of plant : 2000</p>
+                        </div>
+
+
+                        <p class="p_DetailsOfDonor">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quaerat veniam dolor
+                            officia labore voluptate eum, rem aliquam incidunt eaque expedita earum ducimus odit
+                            recusandae dignissimos ullam quidem facilis? Vero.
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="container-fluid mb-4">
+        <div class="row">
+            <div class="col-lg-3 col-12 my-1">
+                <div class="s2">
+                    <h4>Dip Kumar Pal</h4>
+                    <div class="donorDetailsBody">
+                        <p class="p_DetailsOfDonor">Date : 16/12/2024</p>
+                        <div class="numberOfPlant">
+                            <p class="p_DetailsOfDonor">Number of plant : 2000</p>
+                        </div>
+
+
+                        <p class="p_DetailsOfDonor">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quaerat veniam dolor
+                            officia labore voluptate eum, rem aliquam incidunt eaque expedita earum ducimus odit
+                            recusandae dignissimos ullam quidem facilis? Vero.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-12 my-1">
+                <div class="s2">
+                    <h4>Ram</h4>
+                    <div class="donorDetailsBody">
+                        <p class="p_DetailsOfDonor">Date : 11/12/2024</p>
+                        <div class="numberOfPlant">
+                            <p class="p_DetailsOfDonor">Number of plant : 2000</p>
+                        </div>
+
+
+                        <p class="p_DetailsOfDonor">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quaerat veniam dolor
+                            officia labore voluptate eum, rem aliquam incidunt eaque expedita earum ducimus odit
+                            recusandae dignissimos ullam quidem facilis? Vero.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-12 my-1">
+                <div class="s2">
+                    <h4>Kushal</h4>
+                    <div class="donorDetailsBody">
+                        <p class="p_DetailsOfDonor">Date : 16/12/2024</p>
+                        <div class="numberOfPlant">
+                            <p class="p_DetailsOfDonor">Number of plant : 8000</p>
+                        </div>
+
+
+                        <p class="p_DetailsOfDonor">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quaerat veniam dolor
+                            officia labore voluptate eum, rem aliquam incidunt eaque expedita earum ducimus odit
+                            recusandae dignissimos ullam quidem facilis? Vero.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-12 my-1">
+                <div class="s2">
+                    <h4>Dip Kumar Pal</h4>
+                    <div class="donorDetailsBody">
+                        <p class="p_DetailsOfDonor">Date : 16/12/2024</p>
+                        <div class="numberOfPlant">
+                            <p class="p_DetailsOfDonor">Number of plant : 2000</p>
+                        </div>
+
+
+                        <p class="p_DetailsOfDonor">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quaerat veniam dolor
+                            officia labore voluptate eum, rem aliquam incidunt eaque expedita earum ducimus odit
+                            recusandae dignissimos ullam quidem facilis? Vero.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-6 footerText">© 2024 Company, Inc</div>
+            <div class="col-6 logoContainer">
+                <img class="socialMedeiaLogo" src="./asset/facebook.png" />
+                <img class="socialMedeiaLogo" src="./asset/insta.png" />
+                <img class="socialMedeiaLogo" src="./asset/linkedIn.png" />
+                <img class="socialMedeiaLogo" src="./asset/twitter.png" />
+            </div>
+        </div>
+    </footer>
+    <script src="./js/indexJs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
